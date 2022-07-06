@@ -3,12 +3,15 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "dev": "next dev",
+        "dev": "next dev --port=3000",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"
     },
     "dependencies": {
+        "@emotion/react": "^11.9.3",
+        "@emotion/styled": "^11.9.3",
+        "@mui/material": "^5.8.7",
         "next": "12.2.0",
         "next-transpile-modules": "9.0.0",
         "react": "18.2.0",
