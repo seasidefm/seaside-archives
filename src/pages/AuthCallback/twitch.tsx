@@ -1,4 +1,5 @@
 import { getApiHost } from "@core/http";
+import { useUser } from "@core/state/user";
 import { Box, CircularProgress } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { useRouter } from "next/router";
@@ -13,6 +14,7 @@ interface TwitchOAuthParams {
 
 export const TwitchAuthCallback: React.FC = () => {
     const { query } = useRouter();
+    const { setUser } = useUser();
     const data = query as unknown as TwitchOAuthParams;
 
     useQuery(
@@ -37,7 +39,7 @@ export const TwitchAuthCallback: React.FC = () => {
                 }
 
                 if (data) {
-                    console.log(data);
+                    setUser(data);
                 }
             },
         }
