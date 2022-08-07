@@ -1,7 +1,7 @@
 import { AppBar, Toolbar } from "@mui/material";
 import React from "react";
 
-const TWITCH_REDIRECT = process.env.TWITCH_REDIRECT_URI;
+const TWITCH_REDIRECT = process.env.NEXT_PUBLIC_TWITCH_REDIRECT_URI;
 
 export const Navbar: React.FC = () => {
     return (
